@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:rowCount="2"
+    android:columnCount="4"
+    android:id="@+id/layout_main"
+
+    >
+
+            <TextView
+                android:text="Turn of:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:textSize="25sp"
+                android:id="@+id/turnOfTitle" />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/playerName" />
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_columnSpan="4"
+    android:id="@+id/layout_table"
+    android:layout_alignParentLeft="true"
+
+    android:gravity="left">
+
+</TableLayout>
+</GridLayout>
