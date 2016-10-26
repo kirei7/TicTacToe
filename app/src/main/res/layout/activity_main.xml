@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="top"
-    android:rowCount="2"
     android:columnCount="4"
-    android:id="@+id/layout_main"
-
+    android:rowCount="3"
+    android:gravity="top"
     >
 
-            <TextView
-                android:text="Turn of:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnSpan="1"
-                android:textSize="25sp"
-                android:id="@+id/turnOfTitle" />
-            <TextView
-                android:text=""
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnSpan="1"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/playerName" />
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_columnSpan="4"
-    android:id="@+id/layout_table"
-    android:layout_alignParentLeft="true"
+    <TextView
+        android:id="@+id/turnOfTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:text="Turn of:"
+        android:textSize="25sp" />
 
-    android:gravity="left">
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-</TableLayout>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_columnSpan="4"
+        android:layout_marginTop="20dp"
+        android:gravity="left">
+    </TableLayout>
+    <Button
+        android:id="@+id/stats"
+        android:text="Stats"
+        />
 </GridLayout>
