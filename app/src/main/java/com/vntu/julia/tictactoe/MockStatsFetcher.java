@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MockStatsFetcher implements StatsFetcher {
     private Date date;
-    @Override
+    @Overrideі
     public List<Date> getResults(Player player) {
         date = new Date();
         List<Date> dates = new ArrayList<>();
