@@ -1,5 +1,6 @@
 package com.vntu.julia.tictactoe;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         layout =  (TableLayout)findViewById(R.id.layout_table);
+        Button statsButton = (Button) findViewById(R.id.stats);
+        statsButton.setOnClickListener(new StatsButtonListener());
         buildGameField();
     }
 
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void gameOver() {
         CharSequence text = "Draw";
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
         game.reset();
         refresh();
     }
@@ -115,6 +118,20 @@ public class MainActivity extends AppCompatActivity {
     private void displayNextActivePlayerName(Player player) {
         TextView playerNameContainer = (TextView) findViewById(R.id.playerName);
         playerNameContainer.setText(player.getName());
+    }
+
+    public class StatsButtonListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getThis(), StatsActivity.class);
+            startActivity(intent);
+        }
+
+    }
+    //allows inner classes get an instance of the outer class
+    private MainActivity getThis() {
+        return this;
     }
 }
 
