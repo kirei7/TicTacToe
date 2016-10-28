@@ -1,4 +1,4 @@
-package com.vntu.julia.tictactoe;
+package com.vntu.julia.tictactoe.stats;
 
 
 import com.vntu.julia.tictactoe.game.Player;

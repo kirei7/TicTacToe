@@ -27,11 +27,13 @@
         <TableRow android:weightSum="2">
 
             <TextView
+                android:id="@+id/scorePlayerX"
                 android:layout_weight="1"
                 android:text="5 wins"
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/scorePlayerO"
                 android:layout_weight="1"
                 android:text="2 wins"
                 android:textSize="25sp" />
@@ -40,11 +42,11 @@
         <TableRow android:weightSum="2">
 
             <ListView
-                android:id="@+id/scorePlayerX"
+                android:id="@+id/scoresCountPlayerX"
                 android:layout_weight="1"></ListView>
 
             <ListView
-                android:id="@+id/scorePlayerO"
+                android:id="@+id/scoresCountPlayerO"
                 android:layout_weight="1"></ListView>
         </TableRow>
 

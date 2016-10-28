@@ -1,9 +1,7 @@
-package com.vntu.julia.tictactoe;
+package com.vntu.julia.tictactoe.stats;
 
 import com.vntu.julia.tictactoe.game.Player;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,7 +9,7 @@ import java.util.List;
 
 public class MockStatsFetcher implements StatsFetcher {
     private Date date;
-    @Overrideі
+    @Override
     public List<Date> getResults(Player player) {
         date = new Date();
         List<Date> dates = new ArrayList<>();

@@ -13,6 +13,10 @@ import android.widget.Toast;
 import com.vntu.julia.tictactoe.game.Game;
 import com.vntu.julia.tictactoe.game.Player;
 import com.vntu.julia.tictactoe.game.Square;
+import com.vntu.julia.tictactoe.stats.StatsDTO;
+import com.vntu.julia.tictactoe.stats.StatsSaver;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button[][] buttons = new Button[3][3];
     private TableLayout layout;
     private Player activePlayer;
-
+    private StatsSaver statsSaver;
 
     public MainActivity() {
         game = new Game();
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         layout =  (TableLayout)findViewById(R.id.layout_table);
         Button statsButton = (Button) findViewById(R.id.stats);
         statsButton.setOnClickListener(new StatsButtonListener());
+        statsSaver = new StatsSaver(this);
         buildGameField();
     }
 
@@ -89,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gameOver(Player player) {
+        statsSaver.persist( new StatsDTO(
+                player.getName(),
+                (new Date()).getTime()
+        ));
         CharSequence text = "Player \"" + player.getName() + "\" won!";
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
         game.reset();
