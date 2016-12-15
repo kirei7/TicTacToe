@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Загальний вигляд на 4 колонки  і три рядки-->
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_main"
     android:layout_width="fill_parent"
@@ -7,7 +8,8 @@
     android:rowCount="3"
     android:gravity="top"
     >
-
+    <!--У перший рядок кладемо два вигляди-->
+    <!--Перший вигляд просто текст-->
     <TextView
         android:id="@+id/turnOfTitle"
         android:layout_width="wrap_content"
@@ -15,7 +17,7 @@
         android:layout_columnSpan="1"
         android:text="Turn of:"
         android:textSize="25sp" />
-
+    <!--Другий вигляд пустий, у нього програма покладе ім'я гравця що має походити-->
     <TextView
         android:id="@+id/playerName"
         android:layout_width="wrap_content"
@@ -25,7 +27,7 @@
         android:text=""
         android:textSize="25sp"
         android:textStyle="bold" />
-
+    <!--Другий рядок це пуста таблиця, у яку програма помістить поле для гри-->
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layout_table"
         android:layout_width="fill_parent"
@@ -35,6 +37,7 @@
         android:layout_marginTop="20dp"
         android:gravity="left">
     </TableLayout>
+   <!--Третій рядок це кнопка для перегляду статистики-->
     <Button
         android:id="@+id/stats"
         android:text="Stats"

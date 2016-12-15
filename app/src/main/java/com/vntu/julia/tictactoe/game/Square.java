@@ -1,6 +1,7 @@
 package com.vntu.julia.tictactoe.game;
 
-
+//абстракція квадрату поля, потрібна лише для того щоб перевіряти
+//чи був у цьому квадраті хід
 public class Square {
     private Player player = null;
 

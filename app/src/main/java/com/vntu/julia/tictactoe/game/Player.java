@@ -2,7 +2,9 @@ package com.vntu.julia.tictactoe.game;
 
 
 public class Player {
+    //ім'я гравця
     private String name;
+    //марка, якою помічається поле при ході гравця
     private String mark;
 
     public Player(String name) {
