@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--загальний вигляд, 1 колонка, 2 рядки-->
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="1"
-    android:rowCount="2">
+    android:rowCount="1">
 
+    <!--Таблиця на три рядки-->
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
-
+        <!--перший рядок - для імен гравців-->
         <TableRow android:weightSum="2">
-
             <TextView
                 android:layout_weight="1"
                 android:text="PlayerX"
@@ -23,28 +24,29 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
         </TableRow>
-
+        <!--другий рядок - для кількості виграшів-->
         <TableRow android:weightSum="2">
-
             <TextView
+                android:id="@+id/scorePlayerX"
                 android:layout_weight="1"
                 android:text="5 wins"
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/scorePlayerO"
                 android:layout_weight="1"
                 android:text="2 wins"
                 android:textSize="25sp" />
         </TableRow>
-
+        <!--третій рядок - для списків дат виграшів-->
         <TableRow android:weightSum="2">
 
             <ListView
-                android:id="@+id/scorePlayerX"
+                android:id="@+id/scoresCountPlayerX"
                 android:layout_weight="1"></ListView>
 
             <ListView
-                android:id="@+id/scorePlayerO"
+                android:id="@+id/scoresCountPlayerO"
                 android:layout_weight="1"></ListView>
         </TableRow>
 
